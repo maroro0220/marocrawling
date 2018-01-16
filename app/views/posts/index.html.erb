@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Posts</h1>
+<%= render 'posts/movie' %>
+<%= render 'posts/music' %>
+<%= render 'posts/luck' %>
+<%= render 'posts/weather' %>
+<%= render 'posts/wise' %>
+
 <table>
   <thead>
     <tr>
@@ -9,33 +15,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <%for i in (0..2)%>
-  <%=@bot_message[i]%>
-  <img src="<%=@img_url[i]%>"><br />
-  <%end%>
-  <h2>melon</h2>
-  <%for i in (0..2)%>
-
-  <%=@mmu[i]%>
-  <img src="<%=@mmi[i]%>"height="50" width="50"><br />
-
-  <%end%>  <h2>genie</h2>
-    <%for i in (0..2)%>
-
-    <%=@gmu[i]%>
-    <img src="<%=@gmi[i]%>"height="50" width="50"><br />
-    <%end%>
-    <h2>bugs</h2>
-    <%for i in (0..2)%>
-    <%=@bmu[i]%>
-    <img src="<%=@bmi[i]%>" height="50" width="50"><br />
-    <%end%>
-    <% for i in (0..7)%>
-      <%=@weather[i]%><br />
-    <%end%>
-    <%=@wise_saying%><br />
-    <%=@wsaying[@wise_saying]%>
 
   <tbody>
     <% @posts.each do |post| %>

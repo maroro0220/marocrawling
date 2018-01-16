@@ -5,27 +5,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    parser=Parse::Movie.new
-    movie=parser.show
-    @bot_message = movie[0]
-    @img_url = movie[1]
-    
-    parser=Parse::Music.new
-    music_m=parser.show_melon
-    @mmu=music_m[0]
-    @mmi=music_m[1]
-    music_g=parser.show_genie
-    @gmu=music_g[0]
-    @gmi=music_g[1]
-    music_b=parser.show_bugs
-    @bmu=music_b[0]
-    @bmi=music_b[1]
-    parser=Parse::Weather.new
-    @weather=parser.show
-    parser=Parse::WiseSaying.new
-    @wise_saying=parser.show[0]
-    @wsaying=parser.show[1]
-
   end
 
   # GET /posts/1

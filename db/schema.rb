@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20180115175758) do
 
   create_table "fortunes", force: :cascade do |t|
     t.string   "wise_saying"
+    t.string   "luck"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -40,11 +41,6 @@ ActiveRecord::Schema.define(version: 20180115175758) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sevices", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,6 +71,10 @@ ActiveRecord::Schema.define(version: 20180115175758) do
     t.string   "services"
     t.string   "services_position"
     t.text     "last_month_grade"
+    t.string   "location"
+    t.string   "music_site"
+    t.string   "stock_event"
+    t.string   "birthday"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
